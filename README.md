@@ -5,4 +5,5 @@ Projeto para a disciplina MC859 que utiliza dados públicos da Câmara dos deput
 ## 📊 Fonte dos Dados
 
 Os dados utilizados são públicos e foram obtidos através da **API RESTful de Dados Abertos da Câmara dos Deputados**.
-* **Link para a API:** <a href="https://dadosabertos.camara.leg.br/swagger/api.html" target="_blank" rel="noopener noreferrer">https://dadosabertos.camara.leg.br/swagger/api.html</a>
+* **Link para a API:** [https://dadosabertos.camara.leg.br/swagger/api.html](https://dadosabertos.camara.leg.br/swagger/api.html)
+
