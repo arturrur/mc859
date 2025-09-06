@@ -96,43 +96,19 @@ class CamaraAPIGet:
         
         
 
-# url_vot = "https://dadosabertos.camara.leg.br/api/v2/votacoes"
-
-# parameters = {
-#     'dataInicio': "2019-07-01",
-#     'dataFim': "2019-10-01",
-#     'itens': 2
-# }
-
-# response = requests.get(url_vot, params=parameters, timeout=30)
-
-# data = response.json()
-
-# print(data['links'])
-
-# lista_deputados = data['dados']
-# next = data['links'][1]['href']
-
-# df_deputados = pd.DataFrame(lista_deputados)
-
-# response2 = requests.get(next, timeout=30)
-
-# data = response2.json()
-# lista = data['links']
-
-# df_deputados2 = pd.DataFrame(lista)
-
-# print(df_deputados)
-# print(df_deputados2)
-
 if __name__ == "__main__":
+    # Classe usada para coleta de dados
     client = CamaraAPIGet()
     
-    # deputados = client.get_deputados(id_legislatura=56)
+    # Coleta e guarda deputados
+    deputados = client.get_deputados(id_legislatura=56)
     
-    # with open('deputados_raw.json', 'w') as f:
-    #     json.dump(deputados, f, ensure_ascii=False, indent=4)
+    with open('deputados_raw.json', 'w') as f:
+        json.dump(deputados, f, ensure_ascii=False, indent=4)
     
+    
+    
+    # Coleta e guarda votações
     anos = [2019, 2020, 2021, 2022]
         
     votacoes = client.get_votacoes(anos)
