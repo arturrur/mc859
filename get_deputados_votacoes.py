@@ -116,6 +116,4 @@ if __name__ == "__main__":
         with open(f'votacoes_{ano}.json', 'w') as f:
             json.dump(votacoes[ano], f, ensure_ascii=False, indent=4)
     
-    test = pd.DataFrame(votacoes)
-    print(test)
     
